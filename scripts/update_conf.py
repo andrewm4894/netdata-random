@@ -1,10 +1,10 @@
 import requests
 from datetime import datetime
 
-#host = '127.0.0.1:19999'
-#file_path = '/etc/netdata/python.d/anomaliespoc.conf'
-host = '35.193.228.190:19999/'
-file_path = 'anomaliespoc.conf'
+host = '127.0.0.1:19999'
+file_path = '/etc/netdata/python.d/anomaliespoc.conf'
+#host = '35.193.228.190:19999/'
+#file_path = 'anomaliespoc.conf'
 url = f'http://{host}/api/v1/info'
 r = requests.get(url)
 children = r.json()['mirrored_hosts']
