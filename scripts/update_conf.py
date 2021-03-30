@@ -1,3 +1,10 @@
+"""
+# add to cron
+crontab -e
+# comand to run every 5 minutes
+*/5 * * * * sudo python3 /home/andrewmaguire/update_conf.py
+"""
+
 import requests
 from datetime import datetime
 
