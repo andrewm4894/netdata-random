@@ -1,8 +1,12 @@
 """
+# get script
+wget https://raw.githubusercontent.com/andrewm4894/netdata-random/main/scripts/update_conf.py
 # add to cron
 crontab -e
 # comand to run every 5 minutes
 */5 * * * * sudo python3 /home/andrewmaguire/update_conf.py
+# add to cron via comand line
+crontab -l | { cat; echo "*/5 * * * * sudo python3 update_conf.py"; } | crontab -
 """
 
 import requests
@@ -28,6 +32,7 @@ for child in children:
     suffix: '_km'
     thold: 99.0
     display_family: true
+    display_prefix: true
     update_every: 1
     priority: 85
     autodetection_retry: 10
