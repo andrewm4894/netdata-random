@@ -31,8 +31,9 @@ for child in children:
     url: 'http://127.0.0.1:19999/host/{child}/api/v1/allmetrics?format=json'
     suffix: '_km'
     thold: 99.0
-    display_family: true
+    display_family: false
     display_prefix: true
+    display_chart: false
     update_every: 1
     priority: 85
     autodetection_retry: 10
