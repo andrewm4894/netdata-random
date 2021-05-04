@@ -32,7 +32,7 @@ for child in children:
     display_family: true
     display_prefix: true
     display_chart: true
-    update_every: 1
+    update_every: 5
     priority: 85
     autodetection_retry: 10
     """
